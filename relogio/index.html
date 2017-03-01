@@ -1,19 +1,25 @@
-<html>
-<head>
-</head>
-<body>
-<div id="timer">
-  <div class="container">
-    <div id="hour">00</div>
-    <div class="divider">:</div>
-    <div id="minute">00</div>
-    <div class="divider">:</div>
-    <div id="second">00</div>
-  </div>
-  <button id="btn-comenzar">Começar</button>
-</div>
-<script>
-  $(document).ready(function(){
+<html lang="es"><head>
+		<title>Cronómetro</title>
+        <meta charset="utf-8">
+        
+        <link href="style.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+    <body>
+        
+        <div id="timer">
+            <div class="container">
+                <div id="hour">00</div>
+                <div class="divider">:</div>
+                <div id="minute">00</div>
+                <div class="divider">:</div>
+                <div id="second">13</div>                
+            </div>
+            <button id="btn-comenzar">Detener</button>
+        </div>
+        
+        <script>
+$(document).ready(function(){
 
     var tiempo = {
         hora: 0,
@@ -55,6 +61,7 @@
         }
     })
 })
-</script>
-</body>
-</html>
+        </script>
+  
+	
+</body></html>
