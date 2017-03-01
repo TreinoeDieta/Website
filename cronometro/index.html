@@ -99,6 +99,32 @@ button:hover {
     font-weight: bold;
     border: 1px solid #000;
 }
+	
+.botao {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+	width: 21%;
+	height: 13%;
+	
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	
+	margin: 0px 12px 26px 0;
+	
+	color: #888;
+	line-height: 48px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
   </style>
   </head>
   <body ng-app="timerApp"><div id="angular-script-menu">
@@ -117,10 +143,10 @@ button:hover {
    </div>
 
           <div class="buttons">
-             <button ng-click="startTimer()" id="start" autofocus>Começar</button>
-             <button ng-click="stopTimer()" id="stop">Parar</button>
-             <button ng-click="resetTimer()" id="reset">Zerar</button>
-             <button ng-click="lapTimer()" id="lap">Tempo</button>
+             <button ng-click="startTimer()" class="botao" id="start" autofocus>Começar</button>
+             <button ng-click="stopTimer()" class="botao" id="stop">Parar</button>
+             <button ng-click="resetTimer()" class="botao" id="reset">Zerar</button>
+             <button ng-click="lapTimer()" class="botao" id="lap">Tempo</button>
           </div>
 
           <div id="laplist">
