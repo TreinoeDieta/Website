@@ -26,6 +26,8 @@
   //-->
 </script><style>
 /* Basic reset */
+	#wrapper { width: 400px; height: 400px; }
+            #wrapper.paisagem { -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);
 * {
 	margin: 0;
 	padding: 0;
@@ -175,6 +177,16 @@ html {
 </style>
 </head>
 <body>
+	<script>
+            window.addEventListener('orientationchange', function(){     // funciona com addEventListener('resize', ...) também!
+                if(window.innerHeight > window.innerWidth) document.getElementById('wrapper').className = 'retrato';
+                else document.getElementById('wrapper').className = 'paisagem';
+            });
+
+            window.addEventListener('load', function(){
+                document.getElementById('wrapper').className = 'retrato';
+            });
+        </script>
 <div id="calculator">
 	<!-- Screen and clear key -->
 	<div class="top">
