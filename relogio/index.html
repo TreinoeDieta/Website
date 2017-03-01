@@ -1,13 +1,6 @@
-
-	<div id="buttons">
-		<a id="change" href=#>Start /  Stop</a>
-		<a href=# id="init">Reset</a>
-	</div>
-	<div id="chronometer">
-		<span id="minutes">00</span><span>&nbsp:&nbsp</span><span id="seconds">00</span><span>&nbsp:&nbsp</span><span id="thousandths">0.00</span>
-	</div>
-	<table id="log"></table>
-<style>
+<html>
+	<head>
+		<style>
 	@import url(http://fonts.googleapis.com/css?family=Iceland);
 html,body{ height:100%; margin:0; }
 	body {
@@ -94,6 +87,17 @@ body::before{
 
 
 </style>
+	</head>
+	<body>
+	<div id="buttons">
+		<a id="change" href=#>Start /  Stop</a>
+		<a href=# id="init">Reset</a>
+	</div>
+	<div id="chronometer">
+		<span id="minutes">00</span><span>&nbsp:&nbsp</span><span id="seconds">00</span><span>&nbsp:&nbsp</span><span id="thousandths">0.00</span>
+	</div>
+	<table id="log"></table>
+
 <script>
 	// Rebound of this pen http://codepen.io/Tonetete/pen/fzDop
 $(function(){
@@ -174,3 +178,4 @@ $(function(){
     $("#init").on('click', resetTimer);
 })
 </script>
+	</body></html>
