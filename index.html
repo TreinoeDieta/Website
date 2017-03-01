@@ -34,6 +34,18 @@ html {
 	border-radius: 3px;
 	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
+	#calculatormobile {
+	width: 90%;
+	height: 90%;
+	
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
 
 /* Top portion */
 .top span.clear {
@@ -161,6 +173,7 @@ html {
 		</style>
 </head>
 <body>
+<!--Desktop-->
 	<div class="mobile-hide">
 <div id="calculator">
 	<!-- Screen and clear key -->
@@ -189,6 +202,35 @@ html {
 		<span class="operator">x</span>
 	</div>
 </div></div>
+<!--Mobile-->
+		<div class="mobile"><div class="desktop-hide">
+<div id="calculatormobile">
+	<!-- Screen and clear key -->
+	<div class="top">
+		<span class="clear">C</span>
+		<div class="screen"></div>
+	</div>
+	
+	<div class="keysmobile">
+		<!-- operators and other keys -->
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span class="operator">+</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span class="operator">-</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span class="operator">÷</span>
+		<span>0</span>
+		<span>.</span>
+		<span class="eval">=</span>
+		<span class="operator">x</span>
+	</div>
+</div></div></div>
 
 <!-- PrefixFree -->
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
