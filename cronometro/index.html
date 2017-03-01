@@ -472,9 +472,7 @@ a|0,g=e;x===g&&(g=Math.min(c(a),3));Math.pow(10,g);return 1==f&&0==g?"one":"othe
         <script>
     
 var app = angular.module("timerApp", []);
-
 app.controller("timerController", ["$scope", "$interval", function($scope, $interval) {
-
  
  $scope.timeStatus = 0;
  $scope.startTime = 0;
@@ -489,14 +487,11 @@ app.controller("timerController", ["$scope", "$interval", function($scope, $inte
     if($scope.timeRun){
       $interval.cancel($scope.timeRun);
     }
-
     $scope.timeUpdate = function(){
         $scope.timeStatus++;
     }
     $scope.timeRun = $interval($scope.timeUpdate,10);
   }
-
-
   $scope.stopTimer = function(){
   	if($scope.timeRun){
   		$interval.cancel($scope.timeRun);
@@ -512,7 +507,6 @@ app.controller("timerController", ["$scope", "$interval", function($scope, $inte
     $scope.laps = [];
     $interval.cancel($scope.timeRun);
   }
-
   $scope.lapTimer = function(){
   	//console.log("Start Time 0: " + $scope.startTime);
   	
@@ -527,7 +521,6 @@ app.controller("timerController", ["$scope", "$interval", function($scope, $inte
   	//console.log("=========================");
   	
   }
-
   $scope.getTotal = function(){
   	var total = 0;
   	if ($scope.laps.length == 0){
@@ -540,13 +533,10 @@ app.controller("timerController", ["$scope", "$interval", function($scope, $inte
   	return total/100 + " Sec";
   }
 }
-
 }]);
-
 app.filter('timerFilter', function () {
 	
   return function (time) {
-
   	var ms = time ;
   	var seconds = Math.floor(ms / 100) % 60;
   	var minutes = Math.floor(ms / 6000);
@@ -566,10 +556,8 @@ app.filter('timerFilter', function () {
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-75565105-2', 'auto');
   ga('send', 'pageview');
-
 </script>
 	  	<div class="homebutton"><a href="https://pixeltools.tk/"><image width="70px%"style="border-radius: 50%; position:fixed; right:10px; bottom:10px;" src="https://i.imgur.com/LJJW8r0.png"></image></a></div>
 
