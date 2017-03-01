@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^m.dominio.com$
+RewriteCond %{REQUEST_URI} !^/mobile/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /mobile/$1
+
+RewriteCond %{HTTP_HOST} ^m.pixelhost.tk$
+RewriteRule ^(/)?$ mobile/index.html [L]
