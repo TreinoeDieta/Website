@@ -145,10 +145,20 @@ html {
 	top: 4px;
 	box-shadow: 0px 0px #d3545d;
 }
-					        }
+					        
+	@media only screen and (max-width: 400px) {
+    .mobile-hide{ display: none !important; }
+    }
+    @media only screen and (max-width: 400px) {
+    .mobile{ display: inline !important; }
+    }
+    @media only screen and (min-width: 500px) {
+    .desktop-hide{ display: none !important; }
+    }
 </style>
 </head>
 <body>
+	<div class="mobile-hide">
 <div id="calculator">
 	<!-- Screen and clear key -->
 	<div class="top">
@@ -175,7 +185,7 @@ html {
 		<span class="eval">=</span>
 		<span class="operator">x</span>
 	</div>
-</div>
+</div></div>
 
 <!-- PrefixFree -->
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
