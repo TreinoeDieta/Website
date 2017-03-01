@@ -2,8 +2,9 @@
 	<head>
 	</head>
 	<body>
+		 <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <script>
-    var timer = new Timer();
+var timer = new Timer();
 $('#chronoExample .startButton').click(function () {
     timer.start();
 });
@@ -20,13 +21,15 @@ timer.addEventListener('started', function (e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
 });
 </script>
-		<div id="chronoExample">
-    <div class="values">00:00:00</div>
-    <div>
-        <button class="startButton">Start</button>
-        <button class="pauseButton" >Pause</button>
-        <button class="stopButton">Stop</button>
-    </div>
-</div>
+          <div class="panel panel-default lead">
+            <div class="text-center panel-body" id="chronoExample">
+                <div class="values">00:00:00</div>
+                <div>
+                    <button class="startButton btn btn-success btn-lg">Start</button>
+                    <button class="pauseButton btn btn-primary btn-lg" >Pause</button>
+                    <button class="stopButton btn btn-danger btn-lg">Stop</button>
+                </div>
+            </div>
+          </div>
 	</body>
 </html>
