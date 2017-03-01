@@ -1,183 +1,122 @@
 <html>
 
 	<head>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 		<title>Calendario</title>
 
 		<style>
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
 
-			.mes {
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+}
 
-				font: bold 12px verdana;
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
 
-				background: #f5f5f5;
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
-				text-align: center;
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
 
-				line-height: 25px;				
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
 
-				height: 25px;
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
 
-				width: 240px;
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
 
-			}
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
 
-			.semana {
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
 
-				font: bold 12px verdana;
-
-				background: #f5f5f5;
-
-				text-align: center;
-
-				line-height: 25px;						  
-
-				height: 25px;
-
-				width: 30px;
-
-			}
-
-			.dia {
-
-				background: #f5f5f5;
-
-				font: 12px verdana;				  
-
-				text-align: center;
-
-				height: 25px;
-
-				width: 30px;
-
-			}
-
-			.evento {
-
-				position: relative;
-
-				font: 9px verdana;
-
-				color: #C30;
-
-				right: -7px;
-
-				top: -9px;			  
-
-			}
-
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
 		</style>
 
 	</head>
 
 	<body>
 
-		<table>
+<div class="month"> 
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
 
-			<caption class="mes">Fevereiro 2011</caption>
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
 
-			<thead>
-
-				<tr>
-
-					<td class="dia"><div class="semana">D</td>
-
-					<td class="dia"><div class="semana">S</td>
-
-					<td class="dia"><div class="semana">T</td>
-
-					<td class="dia"><div class="semana">Q</td>
-
-					<td class="dia"><div class="semana">Q</td>
-
-					<td class="dia"><div class="semana">S</td>
-
-					<td class="dia"><div class="semana">S</td>
-
-				</tr>
-
-			</thead>
-
-			<tbody>
-
-				<tr>
-
-					<td class="dia">1<span class="evento">2</span></td>
-
-					<td class="dia">2<span class="evento">5</span></td>
-
-					<td class="dia">3<span class="evento">3</span></td>
-
-					<td class="dia">4</td>
-
-					<td class="dia">5<span class="evento">1</span></td>
-
-					<td class="dia">6</td>
-
-					<td class="dia">7</td>
-
-				</tr>
-
-				<tr>
-
-					<td class="dia">8<span class="evento">2</span></td>
-
-					<td class="dia">9</td>
-
-					<td class="dia">10</td>
-
-					<td class="dia">11<span class="evento">5</span></td>
-
-					<td class="dia">12</td>
-
-					<td class="dia">13<span class="evento"></span></td>
-
-					<td class="dia">14</td>
-
-				</tr>			
-
-				<tr>
-
-					<td class="dia">15<span class="evento">2</span></td>
-
-					<td class="dia">16</td>
-
-					<td class="dia">17</td>
-
-					<td class="dia">18<span class="evento">5</span></td>
-
-					<td class="dia">19</td>
-
-					<td class="dia">20<span class="evento"></span></td>
-
-					<td class="dia">21</td>
-
-				</tr>
-
-				<tr>
-
-					<td class="dia">22<span class="evento">2</span></td>
-
-					<td class="dia">23</td>
-
-					<td class="dia">24</td>
-
-					<td class="dia">25<span class="evento">5</span></td>
-
-					<td class="dia">26</td>
-
-					<td class="dia">27<span class="evento"></span></td>
-
-					<td class="dia">28</td>
-
-				</tr>
-
-			</tbody>
-
-		</table>
-
+<ul class="days"> 
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  ...etc
+</ul>
 	</body>
 
 </html>
