@@ -62,15 +62,25 @@ button:hover {
   </style>
   </head>
   <body ng-app="timerApp"><div id="angular-script-menu">
+	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Pixel Tools - Cronometro -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2816982644079927"
+     data-ad-slot="2992698895"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
       <div class="container" ng-controller="timerController">
           <div id="timer">                     <label>{{timeStatus | timerFilter }}</label>
    </div>
 
           <div class="buttons">
-             <button ng-click="startTimer()" id="start" autofocus>Start</button>
-             <button ng-click="stopTimer()" id="stop">Stop</button>
-             <button ng-click="resetTimer()" id="reset">Reset</button>
-             <button ng-click="lapTimer()" id="lap">Lap</button>
+             <button ng-click="startTimer()" id="start" autofocus>Começar</button>
+             <button ng-click="stopTimer()" id="stop">Parar</button>
+             <button ng-click="resetTimer()" id="reset">Zerar</button>
+             <button ng-click="lapTimer()" id="lap">Tempo (lap)</button>
           </div>
 
           <div id="laplist">
