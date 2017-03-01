@@ -63,7 +63,8 @@ button:hover {
   </head>
   <body ng-app="timerApp"><div id="angular-script-menu">
       <div class="container" ng-controller="timerController">
-          <div id="timer">          </div>
+          <div id="timer">                     <label>{{timeStatus | timerFilter }}</label>
+   </div>
 
           <div class="buttons">
              <button ng-click="startTimer()" id="start" autofocus>Start</button>
