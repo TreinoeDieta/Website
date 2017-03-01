@@ -6,6 +6,13 @@
 <script>
     var timerInstance = new Timer();
 </script>
+		<script>
+			var timer = new Timer();
+timer.start();
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#basicUsage').html(timer.getTimeValues().toString());
+});
+		</script>
 		<div id="basicUsage">00:00:00</div>
 	</body>
 </html>
