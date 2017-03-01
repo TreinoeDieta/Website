@@ -1,81 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Cronómetro</title>
-        <meta charset="utf-8" />
-        
-<style>
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
-body{background:#ddd;font-family:Open Sans;}
-
-#timer{margin:30px auto 0;width:400px;}
-#timer .container{display:table;background:#777;color:#eee;font-weight:bold;width:100%;text-align:center;text-shadow:1px 1px 4px #999;}
-#timer .container div{display:table-cell;font-size:60px;padding:10px;width:20px;}
-#timer .container .divider{width:10px;color:#ddd;}
-#btn-comenzar{box-sizing:border-box;background:#eee;border:none;margin:0 auto;padding:20px;width:100%;font-size:30px;color:#777;}
-#btn-comenzar:hover{background:#fff;}
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
-		</style>        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	</head>
-    <body>
-        
-        <div id="timer">
-            <div class="container">
-                <div id="hour">00</div>
-                <div class="divider">:</div>
-                <div id="minute">00</div>
-                <div class="divider">:</div>
-                <div id="second">00</div>                
-            </div>
-            <button id="btn-comenzar">Comenzar</button>
-        </div>
-        
-        <script>
-$(document).ready(function(){
-
-    var tiempo = {
-        hora: 0,
-        minuto: 0,
-        segundo: 0
-    };
-
-    var tiempo_corriendo = null;
-
-    $("#btn-comenzar").click(function(){
-        if ( $(this).text() == 'Comenzar' )
-        {
-            $(this).text('Detener');                        
-            tiempo_corriendo = setInterval(function(){
-                // Segundos
-                tiempo.segundo++;
-                if(tiempo.segundo >= 60)
-                {
-                    tiempo.segundo = 0;
-                    tiempo.minuto++;
-                }      
-
-                // Minutos
-                if(tiempo.minuto >= 60)
-                {
-                    tiempo.minuto = 0;
-                    tiempo.hora++;
-                }
-
-                $("#hour").text(tiempo.hora < 10 ? '0' + tiempo.hora : tiempo.hora);
-                $("#minute").text(tiempo.minuto < 10 ? '0' + tiempo.minuto : tiempo.minuto);
-                $("#second").text(tiempo.segundo < 10 ? '0' + tiempo.segundo : tiempo.segundo);
-            }, 1000);
-        }
-        else 
-        {
-            $(this).text('Comenzar');
-            clearInterval(tiempo_corriendo);
-        }
-    })
-})
-        </script>
-  
+	<body>
+		<span id="chronotime">0:00:00:00</span>
+<form name="chronoForm">
+    <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+    <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
+</form>
+		<script language="JavaScript">
+<!--
+var startTime = 0
+var start = 0
+var end = 0
+var diff = 0
+var timerID = 0
+function chrono(){
+	end = new Date()
+	diff = end - start
+	diff = new Date(diff)
+	var msec = diff.getMilliseconds()
+	var sec = diff.getSeconds()
+	var min = diff.getMinutes()
+	var hr = diff.getHours()-1
+	if (min < 10){
+		min = "0" + min
+	}
+	if (sec < 10){
+		sec = "0" + sec
+	}
+	if(msec < 10){
+		msec = "00" +msec
+	}
+	else if(msec < 100){
+		msec = "0" +msec
+	}
+	document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
+	timerID = setTimeout("chrono()", 10)
+}
+function chronoStart(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	document.chronoForm.reset.onclick = chronoReset
+	start = new Date()
+	chrono()
+}
+function chronoContinue(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	document.chronoForm.reset.onclick = chronoReset
+	start = new Date()-diff
+	start = new Date(start)
+	chrono()
+}
+function chronoReset(){
+	document.getElementById("chronotime").innerHTML = "0:00:00:000"
+	start = new Date()
+}
+function chronoStopReset(){
+	document.getElementById("chronotime").innerHTML = "0:00:00:000"
+	document.chronoForm.startstop.onclick = chronoStart
+}
+function chronoStop(){
+	document.chronoForm.startstop.value = "start!"
+	document.chronoForm.startstop.onclick = chronoContinue
+	document.chronoForm.reset.onclick = chronoStopReset
+	clearTimeout(timerID)
+}
+//-->
+</script>
 	</body>
 </html>
