@@ -151,31 +151,26 @@ button {
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-	  </div>
-      <div class="container" ng-controller="timerController">
+</script></div>
+      <div class="container" ng-controller="timerController"><center>
           <div id="timer">                     <label>{{timeStatus | timerFilter }}</label>
    </div>
-
           <div class="buttons">
              <button ng-click="startTimer()" class="botao" id="start" autofocus>Começar</button>
              <button ng-click="stopTimer()" class="botao" id="stop">Parar</button>
              <button ng-click="resetTimer()" class="botao" id="reset">Zerar</button>
              <button ng-click="lapTimer()" class="botao" id="lap">Tempo</button>
           </div>
-
           <div id="laplist">
             <div ng-repeat="lap in laps" class="laptime">
               <span> {{lap | timerFilter}} </span>
             </div>
           </div>
-
           <div>=======================================</div>
           <div id="total">
             <span>{{getTotal()}} </span>
           </div>
-
-      </div>
+     </center> </div>
         <script>
 	  /*
  AngularJS v1.5.0-beta.1
