@@ -2,37 +2,8 @@
 	<head>
 	</head>
 	<body>
-		<script src="lib/easytimer/dist/easytimer.min.js"></script>
 <script>
-    var timerInstance = new Timer();
-</script>
-		
-		<script>
-			var timer = new Timer();
-timer.start();
-timer.addEventListener('secondsUpdated', function (e) {
-    $('#basicUsage').html(timer.getTimeValues().toString());
-});
-		</script>
-		<script>
-		var timer = new Timer();
-timer.start({precision: 'seconds'});
-timer.addEventListener('secondsUpdated', function (e) {
-    $('#gettingValuesExample .days').html(timer.getTimeValues().days);
-    $('#gettingValuesExample .hours').html(timer.getTimeValues().hours);
-    $('#gettingValuesExample .minutes').html(timer.getTimeValues().minutes);
-    $('#gettingValuesExample .seconds').html(timer.getTimeValues().seconds);
-    $('#gettingValuesExample .secondTenths').html(timer.getTimeValues().secondTenths);
-
-    $('#gettingTotalValuesExample .days').html(timer.getTotalTimeValues().days);
-    $('#gettingTotalValuesExample .hours').html(timer.getTotalTimeValues().hours);
-    $('#gettingTotalValuesExample .minutes').html(timer.getTotalTimeValues().minutes);
-    $('#gettingTotalValuesExample .seconds').html(timer.getTotalTimeValues().seconds);
-    $('#gettingTotalValuesExample .secondTenths').html(timer.getTotalTimeValues().secondTenths);
-});
-		</script>
-		<script>
-		var timer = new Timer();
+    var timer = new Timer();
 $('#chronoExample .startButton').click(function () {
     timer.start();
 });
@@ -48,8 +19,8 @@ timer.addEventListener('secondsUpdated', function (e) {
 timer.addEventListener('started', function (e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
 });
-		</script>
-<div id="chronoExample">
+</script>
+		<div id="chronoExample">
     <div class="values">00:00:00</div>
     <div>
         <button class="startButton">Start</button>
@@ -57,6 +28,5 @@ timer.addEventListener('started', function (e) {
         <button class="stopButton">Stop</button>
     </div>
 </div>
-           
 	</body>
 </html>
