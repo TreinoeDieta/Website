@@ -8,8 +8,58 @@
   <title>Basic Timer Angular App Demo</title>
   <link href="http://angularscript.com/angularscript.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
+<script>
+  
+  html, body {
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#fafafa;
+}
 
+.container{
+  min-width: 600px;
+  margin-top:150px;
+}
+
+#timer {
+    margin-top: 30px;
+    font-size: 4em;
+}
+
+.buttons,
+#laplist {
+  margin-top: 30px;
+}
+
+.laptime {
+    margin: 10px 0;
+}
+
+.laptime > span ,
+#total > span {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+button {
+    display :inline-block;
+    width: 100px;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    -webkit-transition : border 100ms ease-out;
+    -moz-transition : border 100ms ease-out;
+    -o-transition : border 100ms ease-out;
+}
+    
+
+button:hover {
+    font-weight: bold;
+    border: 1px solid #000;
+}
+  </script>
   </head>
   <body ng-app="timerApp"><div id="angular-script-menu">
       <div class="container" ng-controller="timerController">
