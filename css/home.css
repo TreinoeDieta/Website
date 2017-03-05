@@ -1,8 +1,8 @@
 		.main1 {
 		font-size: 22px;
     		padding-top: 10px;
-    		vertical-align: middle;
-    		width: 58%;
+    		vertical-align: top;
+    		width: 60%;
     		display: inline-block;
     		text-align: center;
 		margin: 3%
@@ -10,8 +10,8 @@
    		.main2 {
 		font-size: 22px;
     		padding-top: 10px;
-    		vertical-align: middle;
-    		width: 30%;
+    		vertical-align: top;
+    		width: 27%;
     		display: inline-block;
     		text-align: center;
 		margin: 3%
