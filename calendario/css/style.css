@@ -53,6 +53,7 @@
 		display: inline-block 
 		}
 		.footertitle {
+    		font-family: "Roboto",helvetica,arial,sans-serif;
 		margin-top: 10px;
 		margin-bottom: 10px;
 		font-size: 22px;
