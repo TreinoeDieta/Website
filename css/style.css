@@ -50,7 +50,7 @@
 		background: url(https://i.imgur.com/8yA3kCM.png); 
 		margin-top: 20px; 
 		height: 152px;
-		display: inline-block 
+		display: inline-block;
 		}
 		.footertitle {
     		font-family: "Roboto",helvetica,arial,sans-serif;
@@ -92,7 +92,7 @@
 		.divisor2 { 
 		width: 50px; 
 		margin-top: 8px; 
-		display: inline-block 
+		display: inline-block ;
 		}
     body {
     margin: 0px;
