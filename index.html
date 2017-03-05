@@ -66,15 +66,15 @@ PIXEL TOOLS
 <div class="divisor2"></div>
 <div class="menu1">
 
-<div class='search-wrapper'>
-<div id='search-box'>
-<div itemprop='mainEntity' itemscope='itemscope' itemtype='http://schema.org/WebSite'>
-<meta content='https://pixeltools.tk/' itemprop='url'/>
-  <form action='https://pixeltools.tk/search' itemprop='potentialAction' itemscope='itemscope' itemtype='http://schema.org/SearchAction' method='get' target='_blank'>
-<meta content='https://pixeltools.tk/search?q={q}' itemprop='target'/>
-<input class='search-form' id='feed-q-input' itemprop='query-input' name='q' placeholder='Search' required='required' type='text'/>
-<button class='search-button' title='Search' type='submit'><i class='material-icons'>&#59574;</i></button>
-  </form></div>
+  <div id="search" align="center" style="margin-top:20px;">
+  <form role="search" method="get" action="/search/" class="form-inline">
+     <div class="form-group">
+       <input style="height:36px;font-size:12pt;width: 100%"; id="searchString" name="searchString"
+              placeholder="Search on this blog..." type="text"><br/>
+       <input style="width: 100%" class="btn" id="searchButton" name="googleSearchName" type="submit" value="Search">
+     </div>  
+  </form>
+</div>
 	
 </div></div>
 <div>
