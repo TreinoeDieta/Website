@@ -1,4 +1,6 @@
 		.main1 {
+    		font-family: "Roboto",helvetica,arial,sans-serif;
+		color: #a22222;
 		font-size: 22px;
     		padding-top: 10px;
     		vertical-align: top;
@@ -8,6 +10,8 @@
 		margin: 3%
 		}		
    		.main2 {
+    		font-family: "Roboto",helvetica,arial,sans-serif;
+		color: #a22222;
 		font-size: 22px;
     		padding-top: 10px;
     		vertical-align: top;
